@@ -14,12 +14,13 @@ public class Main {
 
             // Initialize display object
             Display display = new Display(currency.returnBase(), currency.returnMap());
-            display.displayCurrencies();
+            display.displayCurrency("RON");
+            // Display.displayAllCurrencies();
 
         } catch (Exception e) {
             // Handles any exceptions thrown during fetching/parsing
             System.out.println("An error occurred while fetching or parsing data:");
-            e.printStackTrace();
+            e.printStackTrace(); // Prints an error if there is one
         }
     }
 }

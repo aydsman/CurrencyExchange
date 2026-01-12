@@ -29,14 +29,16 @@ public class Display {
         else return false;
     }
 
-    // Do later
-    public void sortCurrencyCodes() {}
+    public void displayCurrency(String code) {
+        System.out.println("Base currency: " + this.base + "\n----------------------");
+        System.out.println("Currency: " + code + " || Exchance Rate: " + rates.get(code));
+    }
 
-    public void displayCurrencies() {
+    public void displayAllCurrencies() {
         System.out.println("Base currency: " + this.base + "\n----------------------");
         List<String> list = returnSortedList();
         for (String code : list) {
-            System.out.println("Currency: " + code + " || Exchance Rate: " + rates.get(code));
+            if (checkLen3(code)) System.out.println("Currency: " + code + " || Exchange Rate: " + rates.get(code));
         }
     }
 }

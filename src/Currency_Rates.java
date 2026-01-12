@@ -14,11 +14,6 @@ public class Currency_Rates {
         return this.base;
     }
 
-    // Returns the rate of a specific currency
-    public Double returnRate(String code) {
-        return this.rates.get(code);
-    }
-
     Map<String, Double> returnMap() {
         return this.rates;
     }
